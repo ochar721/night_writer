@@ -1,4 +1,5 @@
 require './test/test_helper'
+
 class BrailleToEnglishTest < Minitest::Test
   def test_it_exists_and_has_attributes
     braille_format = BrailleToEnglishFormatter.new("0.\n00\n..\n\n")
@@ -19,5 +20,10 @@ class BrailleToEnglishTest < Minitest::Test
   def test_count_of_braille_characters
     braille_format = BrailleToEnglishFormatter.new("0..0\n000.\n....")
     assert_equal 4,   braille_format.count_of_braille_characters
+  end
+
+  def test_multiple_characters
+    braille_format = BrailleToEnglishFormatter.new("0..0\n000.\n....")
+    assert_equal true, braille_format.multiple_characters
   end
 end
