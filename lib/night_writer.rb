@@ -17,5 +17,5 @@ final_message = translated_message.translate_message
 
 writer = File.open(ARGV[1], "w")
 
-writer.write(final)
+writer.write(final_message)
 writer.close
