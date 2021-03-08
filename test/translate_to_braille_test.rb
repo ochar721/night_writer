@@ -16,4 +16,10 @@ class TranslatorTest < Minitest::Test
     expected ="000..0\n....00\n....0.\n\n"
     assert_equal expected, message.translate_message
   end
+
+  def test_it_a_sentance
+    message = Translator.new(["cats like toys"])
+    expected ="000..0.0..0..00.0....00.00.0\n....000...0.0....0..00.0.00.\n....0.0...0...0.....0.0.000.\n\n"
+    assert_equal expected, message.translate_message
+  end
 end
