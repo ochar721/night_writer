@@ -24,6 +24,6 @@ class BrailleToEnglishTest < Minitest::Test
 
   def test_multiple_characters
     braille_format = BrailleToEnglishFormatter.new("0..0\n000.\n....")
-    assert_equal true, braille_format.multiple_characters
+    assert_equal true, braille_format. multiple_braille_characters
   end
 end
