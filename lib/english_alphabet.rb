@@ -1,4 +1,4 @@
-module EnglishLetters
+module EnglishAlphabet
 
   def alphabet
     dictionary = {
