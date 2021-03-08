@@ -8,11 +8,11 @@ message = created_file.read
 
 created_file.close
 
-puts "Created '#{ARGV[1]}' containing #{message.size-1} characters"
+puts "Created '#{ARGV[1]}' containing #{message.size/6} characters"
 
 braille_txt = BrailleToEnglish.new(message.downcase)
 message1 = braille_txt.join
-require "pry"; binding.pry
+# require "pry"; binding.pry
 translated_message = TranslateToEnglish.new(message1)
 end_message = translated_message.translate
 

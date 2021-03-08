@@ -3,10 +3,10 @@ class BrailleToEnglish
     @file = file.chomp
   end
 
-  def break_down_lines
-    array = @file.split[0..2]
-    @file.each_slice(80)
-  end
+  # def break_down_lines
+  #   array = @file.split[0..2]
+  #   @file.each_slice(80)
+  # end
 
   def join
     new = []
@@ -31,5 +31,4 @@ class BrailleToEnglish
   def multiple_characters
     count > 3
   end
-
 end
