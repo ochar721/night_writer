@@ -10,12 +10,12 @@ created_file.close
 
 puts "Created '#{ARGV[1]}' containing #{message.size-1} characters"
 
-braille_txt = MessageFormatter.new(message.downcase)
-split_message = braille_txt.split_lines
-translated_message = TranslateToBraille.new(split_message)
-end_message = translated_message.translate_message
+formatted = MessageFormatter.new(message.downcase)
+english_message = formatted.split_lines
+translated_message = TranslateToBraille.new(english_message)
+final_message = translated_message.translate_message
 
 writer = File.open(ARGV[1], "w")
 
-writer.write(end_message)
+writer.write(final)
 writer.close
