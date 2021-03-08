@@ -4,12 +4,16 @@ class TranslatorTest < Minitest::Test
     message = Translator.new(["a"])
     assert_instance_of Translator, message
   end
-  
+
   def test_it_can_translate_word
     message = Translator.new(["a"])
     expected = "0.\n..\n..\n\n"
     assert_equal expected, message.translate_message
   end
 
-
+  def test_it_can_translate_a_word
+    message = Translator.new(["cat"])
+    expected ="000..0\n....00\n....0.\n\n"
+    assert_equal expected, message.translate_message
+  end
 end
