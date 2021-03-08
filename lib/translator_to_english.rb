@@ -19,12 +19,12 @@ class TranslateToEnglish
    english.join
   end
 
-def translate_single
-  characters = []
-  alphabet.map do |braille, letter|
-   if @messages == braille
-   characters << letter
-    end
+  def translate_single
+    characters = []
+    alphabet.map do |braille, letter|
+      if @messages == braille
+        characters << letter
+      end
     end
     characters
   end

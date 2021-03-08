@@ -5,18 +5,18 @@ class BrailleToEnglishFormatter
   end
 
   def join
-    array = @file.split[0..2]
-    until array == [ '', '', '']
-      array.each do |string|
+    create_braille_letter = @file.split[0..2]
+    until create_braille_letter  == [ '', '', '']
+      create_braille_letter .each do |string|
         @braille << string.slice(0..1)
         string.slice!(0..1)
-        end
       end
-    message_size
+    end
+   message_size
   end
 
   def message_size
-    if multiple_characters
+    if multiple_braille_characters
       @braille.each_slice(3).to_a
     else
       @file.split
@@ -24,10 +24,10 @@ class BrailleToEnglishFormatter
   end
 
   def count_of_braille_characters
-    count = @file.size / 3
+    @file.size / 3
   end
 
-  def multiple_characters
+  def multiple_braille_characters
     count_of_braille_characters > 3
   end
 end
