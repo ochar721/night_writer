@@ -1,0 +1,10 @@
+require 'simplecov'
+SimpleCov.start
+require 'minitest/autorun'
+require 'minitest/pride'
+require './lib/translator_to_braille'
+# require './lib/braille'
+# require './lib/message_format'
+# require './lib/english_translator'
+# require './lib/english'
+# require './lib/braille_formator'
