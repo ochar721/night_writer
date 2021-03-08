@@ -1,4 +1,3 @@
-# require './lib/braille_formator'
 require './lib/english_alphabet'
 
 class TranslateToEnglish
@@ -20,12 +19,12 @@ class TranslateToEnglish
    english.join
   end
 
-def translate_single
-  characters = []
-  alphabet.map do |braille, letter|
-   if @messages == braille
-   characters << letter
-    end
+  def translate_single
+    characters = []
+    alphabet.map do |braille, letter|
+      if @messages == braille
+        characters << letter
+      end
     end
     characters
   end
@@ -45,7 +44,6 @@ def translate_single
   end
 
   def single_character
-    count = (@messages.flatten).size
-    count = 3
+    (@messages.flatten).size == 3
   end
 end

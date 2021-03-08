@@ -14,11 +14,11 @@ class MessageFormatterTest < Minitest::Test
     message_format= MessageFormatter.new("I like cats and they are all so cute and amazing with small noses")
 
     expected = ["I like cats and they are all so cute and", " amazing with small noses"]
-    
+
     assert_equal expected, message_format.split_lines
   end
 
-    def test_it_can_test_split_lines_with_over_80_characters
+  def test_it_can_test_split_lines_with_over_80_characters
     message_format2 = MessageFormatter.new("I like cats and they are all so cute and amazing with small noses cute little deadly claws and tails that are so swishy")
 
     expected = ["I like cats and they are all so cute and", " amazing with small noses cute little de", "adly claws and tails that are so swishy"]
