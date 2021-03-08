@@ -5,10 +5,10 @@ class TranslateToBraille
 
   def initialize(split_messages)
     @split_messages = split_messages
+    @braille = ""
   end
 
   def translate_message
-    message = ""
     @split_messages.each do |split_message|
     3.times do |index|
         split_message.chars.each do |character|

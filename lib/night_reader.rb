@@ -10,12 +10,10 @@ created_file.close
 
 puts "Created '#{ARGV[1]}' containing #{message.size/6} characters"
 
-braille_txt = BrailleToEnglish.new(message.downcase)
+braille_txt = BrailleToEnglishFormatter.new(message.downcase)
 message1 = braille_txt.join
-# require "pry"; binding.pry
 translated_message = TranslateToEnglish.new(message1)
 end_message = translated_message.translate
-
 
 writer = File.open(ARGV[1], "w")
 

@@ -1,4 +1,3 @@
-# require './lib/braille_formator'
 require './lib/english_alphabet'
 
 class TranslateToEnglish
@@ -45,7 +44,6 @@ def translate_single
   end
 
   def single_character
-    count = (@messages.flatten).size
-    count = 3
+    (@messages.flatten).size == 3
   end
 end
