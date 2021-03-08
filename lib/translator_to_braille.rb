@@ -2,10 +2,10 @@ require './lib/message_formatter'
 require './lib/braille_alphabet'
 class TranslateToBraille
   include BrailleAlphabet
+
   def initialize(split_messages)
     @split_messages = split_messages
   end
-
 
   def translate_message
     message = ""
